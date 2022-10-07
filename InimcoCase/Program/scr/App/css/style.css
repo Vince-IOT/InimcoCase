@@ -1,0 +1,36 @@
+@import 'CommonStyle.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html {
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background: rgb(2, 196, 246);
+    background: linear-gradient(145deg, rgba(2, 196, 246, 1) 40%, rgb(1, 120, 150) 100%); */
+}
+
+.bg {
+    /* The image used */
+    background-image: url("../img/spaceBG.jpg");
+  
+    /* Full height */
+    height: 100%;
+    width: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.Forum{
+    width: 550px;
+    height: 700px;
+    margin-top: 125px;
+    background: linear-gradient(145deg, #121212 10%, #181818 100%);
+}
