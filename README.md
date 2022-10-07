@@ -9,3 +9,7 @@ ToDo:
 
     Business logic:
         - Add function to switch name
+    
+    Database:
+        - Make Database
+        - Create table
