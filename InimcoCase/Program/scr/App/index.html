@@ -15,25 +15,41 @@
 <body>
     <div class="Application">
         <div class="Forum Hcenter">
-            <input type="text" placeholder="Full Name" class="NameTextbox Hcenter">
-            
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Personality</button>
-                <div id="SkillsDropdown" class="SkillsDropdown-content">
-                  <input type="text" placeholder="Search.." id="SKillsInput" onkeyup="filterFunction()">
-                  <a id="Skill">Team Player</a>
-                  <a id="Skill">Social</a>
-                  <a id="Skill">Honest</a>
-                  <a id="Skill">Flexibility</a>
-                  <a id="Skill">Motivated</a>
-                  <a id="Skill">Caring</a>
-                  <a id="Skill">Courtesy</a>
-                  <a id="Skill">Understanding</a>
-                  <a id="Skill">Passionate</a>
-                  <a id="Skill">Enthusiastic</a>
-                  <a id="Skill">Resourcefull</a>
-                  <a id="Skill">Forgiving</a>
+
+            <div class="PersonalInfo-Container">
+                <span>Name</span>
+                <input type="text" placeholder="Name" class="NameTextbox Hcenter">
+                <span>Surname</span>
+                <input type="text" placeholder="Surname" class="NameTextbox Hcenter">
+            </div>
+
+            <div class="PersonalSkills-Container">
+
+                <div class="SkillList-container">
+                    <span class="SKL-Title">Skills</span>
+                    <ul class="SkillList" id="SkillList"></ul>
                 </div>
+
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Personality</button>
+                    <div id="SkillsDropdown" class="SkillsDropdown-content">
+                      <input type="text" placeholder="Search.." id="SKillsInput" onkeyup="filterFunction()">
+                      <span id="Skill" onclick="AddSkillToList(this)">Team Player</span>
+                      <span id="Skill" onclick="AddSkillToList(this)">Social</span>
+                      <span id="Skill" onclick="AddSkillToList(this)">Honest</span>
+                      <span id="Skill" onclick="AddSkillToList(this)">Flexible</span>
+                      <span id="Skill" onclick="AddSkillToList(this)">Motivated</span>
+                      <span id="Skill" onclick="AddSkillToList(this)">Caring</span>
+                      <span id="Skill" onclick="AddSkillToList(this)">Courtesy</span>
+                      <span id="Skill" onclick="AddSkillToList(this)">Understanding</span>
+                      <span id="Skill" onclick="AddSkillToList(this)">Passionate</span>
+                      <span id="Skill" onclick="AddSkillToList(this)">Enthusiastic</span>
+                      <span id="Skill" onclick="AddSkillToList(this)">Resourcefull</span>
+                      <span id="Skill" onclick="AddSkillToList(this)">Forgiving</span>
+                      <input type="text" placeholder="Add you own" id="AddSKill" onkeyup="filterFunction()">
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

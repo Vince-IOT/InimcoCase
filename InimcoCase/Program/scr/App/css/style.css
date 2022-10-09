@@ -14,6 +14,8 @@ html {
     background: linear-gradient(145deg, rgba(2, 196, 246, 1) 40%, rgb(1, 120, 150) 100%);
 }
 
+/* ==================== Forum Background ======================== */
+
 .Forum {
     width: 550px;
     height: 700px;
@@ -22,6 +24,60 @@ html {
     box-shadow: rgba(0, 0, 0, 0.50) 6px 6px 12px;
 }
 
+
+/* ==================== Personal info css ======================== */
+
+.PersonalInfo-Container{
+    width: 100%;
+    height: 200px;
+    /* background-color: red; */
+    text-align: center;
+}
+.PersonalInfo-Container span{
+    font-size: 48px;
+    color: white;
+}
+
+.PersonalInfo-Container .NameTextbox{
+    font-size: 28px;
+    text-align: center;
+    border-radius: 25px;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+}
+
+/* ==================== Personal Skills css ======================== */
+
+
+.SkillList-container{
+    margin-left: 50px;
+    margin-top: 25px;
+    color: white;
+    width: 250px;
+    height: auto;
+    text-align: center;
+    background-color: #48545d;
+    box-shadow: rgba(0, 0, 0, 0.50) 1px 1px 4px;
+}
+
+.SKL-Title{
+    font-size: 32px;
+}
+
+.SkillList{
+    list-style: none;
+}
+
+
+/* ===== Personal Skills Dropdown css =====*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    left: 60%;
+    top: -50px;
+}
 .dropbtn {
     background-color: #04AA6D;
     color: white;
@@ -47,20 +103,24 @@ html {
     padding: 14px 20px 12px 45px;
     border: none;
     border-bottom: 1px solid #ddd;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #SKillsInput:focus {
     outline: 3px solid #ddd;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+#AddSKill{
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
 }
+
+#AddSKill:focus {
+    outline: 3px solid #ddd;
+}
+
 
 .SkillsDropdown-content {
     display: none;
@@ -76,14 +136,14 @@ html {
 }
 
  
-.SkillsDropdown-content a{
+.SkillsDropdown-content span{
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown a:hover {
+.dropdown span:hover {
     cursor: pointer;
     background-color: #ddd;
 }

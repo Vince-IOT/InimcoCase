@@ -7,7 +7,7 @@ function filterFunction() {
   input = document.getElementById("SKillsInput");
   filter = input.value.toUpperCase();
   div = document.getElementById("SkillsDropdown");
-  a = div.getElementsByTagName("a");
+  a = div.getElementsByTagName("span");
   for (i = 0; i < a.length; i++) {
     txtValue = a[i].textContent || a[i].innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -18,8 +18,16 @@ function filterFunction() {
   }
 }
 
-Skill = document.getElementById("Skill").addEventListener("click", AddSkillToList)
-
-function AddSkillToList() {
-  alert("Test")
+function AddSkillToList(value) {
+  const li = document.querySelectorAll('ul li');
+  for (let i = 0; i < li.length; i++) {
+    // it is the same as equal to
+    if (li[i].textContent === value.innerText) {
+        alert("This skill is already in the list!")
+        return;
+    }
+  }
+  var node = document.createElement('li');
+  node.appendChild(document.createTextNode(value.innerText));
+  document.querySelector('ul').appendChild(node);
 }
