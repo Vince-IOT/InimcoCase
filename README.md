@@ -1,8 +1,6 @@
 # InimcoCase
 Inimco Case
 
-## Test
-
 ToDo:
 
     UI:
