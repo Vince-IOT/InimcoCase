@@ -7,8 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="./scripts/jquery.js"></script>
+
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Other -->
     <title>Inimco case</title>
 </head>
 
@@ -17,10 +23,10 @@
         <div class="Forum Hcenter">
 
             <div class="PersonalInfo-Container">
-                <span>Name</span>
-                <input type="text" placeholder="Name" class="NameTextbox Hcenter">
-                <span>Surname</span>
-                <input type="text" placeholder="Surname" class="NameTextbox Hcenter">
+                <span>First Name</span>
+                <input type="text" placeholder="First name" class="NameTextbox Hcenter">
+                <span>Last Name</span>
+                <input type="text" placeholder="Last name" class="NameTextbox Hcenter">
             </div>
 
             <div class="PersonalSkills-Container">
@@ -28,29 +34,37 @@
                 <div class="SkillList-container">
                     <span class="SKL-Title">Skills</span>
                     <ul class="SkillList" id="SkillList"></ul>
+                    
                 </div>
 
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Personality</button>
                     <div id="SkillsDropdown" class="SkillsDropdown-content">
                       <input type="text" placeholder="Search.." id="SKillsInput" onkeyup="filterFunction()">
-                      <span id="Skill" onclick="AddSkillToList(this)">Team Player</span>
-                      <span id="Skill" onclick="AddSkillToList(this)">Social</span>
-                      <span id="Skill" onclick="AddSkillToList(this)">Honest</span>
-                      <span id="Skill" onclick="AddSkillToList(this)">Flexible</span>
-                      <span id="Skill" onclick="AddSkillToList(this)">Motivated</span>
-                      <span id="Skill" onclick="AddSkillToList(this)">Caring</span>
-                      <span id="Skill" onclick="AddSkillToList(this)">Courtesy</span>
-                      <span id="Skill" onclick="AddSkillToList(this)">Understanding</span>
-                      <span id="Skill" onclick="AddSkillToList(this)">Passionate</span>
-                      <span id="Skill" onclick="AddSkillToList(this)">Enthusiastic</span>
-                      <span id="Skill" onclick="AddSkillToList(this)">Resourcefull</span>
-                      <span id="Skill" onclick="AddSkillToList(this)">Forgiving</span>
-                      <input type="text" placeholder="Add you own" id="AddSKill" onkeyup="filterFunction()">
+                      <span onclick="AddSkillToList(this)">Team Player</span>
+                      <span onclick="AddSkillToList(this)">Social</span>
+                      <span onclick="AddSkillToList(this)">Honest</span>
+                      <span onclick="AddSkillToList(this)">Flexible</span>
+                      <span onclick="AddSkillToList(this)">Motivated</span>
+                      <span onclick="AddSkillToList(this)">Caring</span>
+                      <span onclick="AddSkillToList(this)">Courtesy</span>
+                      <span onclick="AddSkillToList(this)">Understanding</span>
+                      <span onclick="AddSkillToList(this)">Passionate</span>
+                      <span onclick="AddSkillToList(this)">Enthusiastic</span>
+                      <span onclick="AddSkillToList(this)">Resourcefull</span>
+                      <span onclick="AddSkillToList(this)">Forgiving</span>
+                      <input type="text" placeholder="Add you own" id="AddSKill-Textbox"> <button id="AddSkillBtn" class="AddSkillBtn">ADD</button>
                     </div>
                 </div>
 
+                <!-- <span class="SKL-Info">(Click on a skill to remove it from the list)</span> -->
+
             </div>
+
+            <div class="SocialMedia-Container">
+                
+            </div>
+
         </div>
     </div>
 </body>

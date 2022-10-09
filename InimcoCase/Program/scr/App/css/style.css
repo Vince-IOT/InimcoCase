@@ -18,7 +18,7 @@ html {
 
 .Forum {
     width: 550px;
-    height: 700px;
+    height: 800px;
     margin-top: 75px;
     background-color: #2b3237;
     box-shadow: rgba(0, 0, 0, 0.50) 6px 6px 12px;
@@ -42,13 +42,18 @@ html {
     font-size: 28px;
     text-align: center;
     border-radius: 25px;
-    border-width: 5px;
+    border-width: 3px;
     border-color: black;
     border-style: solid;
+    box-shadow: rgba(0, 0, 0, 0.50) 1px 1px 4px;
 }
 
 /* ==================== Personal Skills css ======================== */
 
+.PersonalSkills-Container{
+    width: 100%;
+    height: 380px;
+}
 
 .SkillList-container{
     margin-left: 50px;
@@ -56,42 +61,56 @@ html {
     color: white;
     width: 250px;
     height: auto;
+    max-height: 320px;
+    overflow: auto;
     text-align: center;
     background-color: #48545d;
     box-shadow: rgba(0, 0, 0, 0.50) 1px 1px 4px;
+    float: left;
 }
 
 .SKL-Title{
     font-size: 32px;
+    text-decoration: underline;
+    
 }
 
 .SkillList{
     list-style: none;
+    font-size: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.SkillList li {
+    cursor: pointer;
 }
 
 
 /* ===== Personal Skills Dropdown css =====*/
 
 .dropdown {
-    position: relative;
-    display: inline-block;
-    left: 60%;
-    top: -50px;
+    position: inherit;
+    float: left;
+    margin-left: 15px;
+    margin-top: 25px;
+    
 }
 .dropbtn {
-    background-color: #04AA6D;
+    background-color: #48545d;
     color: white;
-    padding: 16px;
-    font-size: 16px;
+    font-size: 24px;
+    width: 175px;
+    height: 50px;
     border: none;
     cursor: pointer;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.50) 1px 1px 4px;
 }
 
-.dropbtn:hover,
-.dropbtn:focus {
-    background-color: #3e8e41;
+.dropbtn:hover {
+    background-color: #8399a9;
 }
 
 #SKillsInput {
@@ -109,18 +128,27 @@ html {
     outline: 3px solid #ddd;
 }
 
-#AddSKill{
+#AddSKill-Textbox{
     box-sizing: border-box;
     font-size: 16px;
-    padding: 14px 20px 12px 45px;
+    padding: 14px 20px 12px 0px;
     border: none;
     border-bottom: 1px solid #ddd;
 }
 
-#AddSKill:focus {
+#AddSKill-Textbox:focus {
     outline: 3px solid #ddd;
 }
 
+.AddSkillBtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-width: 1px;
+    background-color: #aaaaaa;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .SkillsDropdown-content {
     display: none;
@@ -131,8 +159,6 @@ html {
     overflow: scroll;
     border: 1px solid #ddd;
     z-index: 1;
-    margin-left: auto;
-    margin-right: auto;
 }
 
  
@@ -143,11 +169,31 @@ html {
     display: block;
 }
 
-.dropdown span:hover {
+.dropdown span:hover,
+.AddSkillBtn:hover {
     cursor: pointer;
     background-color: #ddd;
 }
 
 .show {
     display: block;
+}
+
+
+.SKL-Info{
+    position: absolute;
+    color: white;
+
+    width: auto;
+    height: 25px;
+    margin-top: 75px;
+}
+
+
+/* ==================== Social Media css ======================== */
+
+.SocialMedia-Container{
+    width: 100%;
+    height: 210px;
+    background-color: blue;
 }
