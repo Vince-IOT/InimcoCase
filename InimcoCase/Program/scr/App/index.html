@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta data -->
     <meta charset="UTF-8">
@@ -10,12 +11,35 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Inimco case</title>
 </head>
+
 <body>
     <div class="Application">
-        <div class="bg">
-            <div class="Forum Hcenter">
+        <div class="Forum Hcenter">
+            <input type="text" placeholder="Full Name" class="NameTextbox Hcenter">
+            
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Personality</button>
+                <div id="SkillsDropdown" class="SkillsDropdown-content">
+                  <input type="text" placeholder="Search.." id="SKillsInput" onkeyup="filterFunction()">
+                  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"> <label for="vehicle1"> I have a bike</label>
+                  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"> <label for="vehicle1"> I have a bike</label>
+                  <a href="">Team Player</a>
+                  <a href="">Social</a>
+                  <a href="">Honest</a>
+                  <a href="">Flexibility</a>
+                  <a href="">Motivated</a>
+                  <a href="">Caring</a>
+                  <a href="">Courtesy</a>
+                  <a href="">Understanding</a>
+                  <a href="">Passionate</a>
+                  <a href="">Enthusiastic</a>
+                  <a href="">Resourcefull</a>
+                  <a href="">Forgiving</a>
+                </div>
             </div>
-        </div>        
+        </div>
     </div>
 </body>
+<script src="./scripts/Dropdown.js"></script>
+
 </html>

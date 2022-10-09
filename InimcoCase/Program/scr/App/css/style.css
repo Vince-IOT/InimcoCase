@@ -10,27 +10,83 @@ html {
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    /* background: rgb(2, 196, 246);
-    background: linear-gradient(145deg, rgba(2, 196, 246, 1) 40%, rgb(1, 120, 150) 100%); */
+    background: rgb(2, 196, 246);
+    background: linear-gradient(145deg, rgba(2, 196, 246, 1) 40%, rgb(1, 120, 150) 100%);
 }
 
-.bg {
-    /* The image used */
-    background-image: url("../img/spaceBG.jpg");
-  
-    /* Full height */
-    height: 100%;
-    width: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-.Forum{
+.Forum {
     width: 550px;
     height: 700px;
-    margin-top: 125px;
-    background: linear-gradient(145deg, #121212 10%, #181818 100%);
+    margin-top: 75px;
+    background-color: #2b3237;
+    box-shadow: rgba(0, 0, 0, 0.50) 6px 6px 12px;
+}
+
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+#SKillsInput {
+    box-sizing: border-box;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#SKillsInput:focus {
+    outline: 3px solid #ddd;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.SkillsDropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    height: 300px;
+    overflow: scroll;
+    border: 1px solid #ddd;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.SkillsDropdown-content input, 
+.SkillsDropdown-content label{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
 }
