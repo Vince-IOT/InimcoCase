@@ -8,7 +8,6 @@ const isValidUrl = urlString => {
     return !!urlPattern.test(urlString);
 }
 
-
 function AddSocial(variable) {
     SocialMediaSite = variable.id.split("-")
     if (document.getElementById(variable.id).classList.contains("Connected")) {
