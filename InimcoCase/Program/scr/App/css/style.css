@@ -207,6 +207,7 @@ html {
     font-size: 50px;
     text-align: center;
     color: white;
+    cursor: pointer;
 }
 
 .SocialMedia-Container span{
@@ -218,5 +219,13 @@ html {
 .Media-Container{
     margin: auto;
     text-align: center;
-    cursor: pointer;
+    
+}
+
+.Connected {
+    color: limegreen;
+}
+
+.disconnect-Text{
+    visibility: hidden;
 }
