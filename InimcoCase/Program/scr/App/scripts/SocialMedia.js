@@ -1,3 +1,14 @@
+var Socials = {
+    facebook : "",
+    instagram : "",
+    linkedin : "",
+    twitter : "",
+    extra1 : "",
+    extra2 : "",
+    extra3 : "",
+    extra4 : ""
+}
+
 const isValidUrl = urlString => {
     var urlPattern = new RegExp('^(https?:\\/\\/)?' + // validate protocol
         '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // validate domain name
@@ -41,6 +52,8 @@ function AddSocial(variable) {
             document.getElementById(variable.id).classList.toggle("Connected");
             var DisconnectedText = document.getElementById(SocialMediaSite[1] + "-disconnect-Text");
             DisconnectedText.style.visibility = "visible";
+
+            Socials[SocialMediaSite] = SocialsLink
         }
     }
 }
