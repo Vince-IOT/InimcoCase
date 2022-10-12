@@ -1,10 +1,10 @@
 var Socials = {
-    facebook : "",
-    instagram : "",
+    facebook : "Test",
+    instagram : "Test",
     linkedin : "",
-    twitter : "",
+    twitter : "test",
     extra1 : "",
-    extra2 : "",
+    extra2 : "test",
     extra3 : "",
     extra4 : ""
 }
