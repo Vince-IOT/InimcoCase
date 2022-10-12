@@ -29,7 +29,6 @@ function CheckForInvalids() {
 }
 
 
-
 var user = {
     FirstName: "",
     LastName: "",
