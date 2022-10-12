@@ -18,8 +18,8 @@ html {
 
 .Forum {
     width: 550px;
-    height: 800px;
-    margin-top: 75px;
+    height: 900px;
+    margin-top: 25px;
     background-color: #2b3237;
     box-shadow: rgba(0, 0, 0, 0.50) 6px 6px 12px;
 }
@@ -229,3 +229,45 @@ html {
 .disconnect-Text{
     visibility: hidden;
 }
+
+
+
+
+.Submit-Btn{
+    margin-top: 10px;
+    width: 350px;
+    height: 75px;
+    border-radius: 50px;
+    font-size: 36px;
+    background: rgb(2, 196, 246);
+    /* background: linear-gradient(90deg, rgba(2, 196, 246, 1) 40%, rgb(1, 120, 150) 100%); */
+    box-shadow: rgba(0, 0, 0, 0.50) 1px 1px 4px;
+    transition: all .1s ease-in;
+}
+
+.Submit-Btn:hover{
+    transition: all .1s ease-in;
+    background: limegreen;
+    /* background: linear-gradient(90deg, rgb(2, 246, 22) 40%, rgb(13, 150, 1) 100%); */
+    
+}
+
+.Submit-Btn:active{
+    transform: translateY(4px);
+    background: rgb(44, 182, 44);
+}
+
+/* @keyframes SubmitBtnActiveAnimation{
+    0% {
+        background: rgb(2, 196, 246);
+        background: linear-gradient(90deg, rgba(2, 196, 246, 1) 40%, rgb(1, 120, 150) 100%);
+    }
+    50% {
+        background: rgb(2, 196, 246);
+        background: linear-gradient(90deg, rgba(1, 120, 150) 40%, rgb(2, 246, 22) 100%);
+    }
+    100%{
+        background: rgb(2, 246, 22);
+        background: linear-gradient(90deg, rgb(2, 246, 22) 40%, rgb(13, 150, 1) 100%);
+    }
+} */
