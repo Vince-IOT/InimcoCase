@@ -9,7 +9,7 @@ const isValidUrl = urlString => {
 }
 
 function AddSocial(variable) {
-    SocialMediaSite = variable.id.split("-")
+    SocialMediaSite = variable.id.split("-");
     if (document.getElementById(variable.id).classList.contains("Connected")) {
         document.getElementById(variable.id).classList.toggle("Connected");
         document.getElementById(SocialMediaSite[1] + "-Username").innerHTML = SocialMediaSite[1];
