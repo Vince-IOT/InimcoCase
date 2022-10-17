@@ -1,13 +1,4 @@
-var Socials = {
-    facebook : "",
-    instagram : "",
-    linkedin : "",
-    twitter : "",
-    extra1 : "",
-    extra2 : "",
-    extra3 : "",
-    extra4 : ""
-}
+var Socials = {}
 
 const isValidUrl = urlString => {
     var urlPattern = new RegExp('^(https?:\\/\\/)?' + // validate protocol
@@ -53,7 +44,7 @@ function AddSocial(variable) {
             var DisconnectedText = document.getElementById(SocialMediaSite[1] + "-disconnect-Text");
             DisconnectedText.style.visibility = "visible";
 
-            Socials[SocialMediaSite] = SocialsLink
+            Socials[SocialMediaSite[1]] = SocialsLink;
         }
     }
 }

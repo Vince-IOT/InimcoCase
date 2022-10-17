@@ -1,8 +1,10 @@
 var FirstNameText = ""
 var LastNameText = ""
 
-function CheckForInvalids() {
 
+// Function checks if anything is left empty on submitting
+function CheckForInvalids() {
+    
     FirstNameText = document.getElementById("FirstNameTextbox").value;
     LastNameText = document.getElementById("LastNameTextbox").value;
     const SkillList = document.getElementById("SkillList");
@@ -22,12 +24,11 @@ function CheckForInvalids() {
         }
     }
     if (SocialCount == 0) {
-        alert("Don't forget to add some socials, it's not required but always handy! :D")
+        alert("Don't forget to add some socials, it's always handy! :D")
         return false;
     }
     return true;
 }
-
 
 var user = {
     FirstName: "",
@@ -42,7 +43,7 @@ var user = {
 
 const SubmitBtn = document.getElementById("Submit-Btn");
 
-SubmitBtn.addEventListener("click", function () {
+SubmitBtn.addEventListener("click", async function () {
     if (!CheckForInvalids()) {
         return;
     }
@@ -50,11 +51,13 @@ SubmitBtn.addEventListener("click", function () {
     user.FirstName = FirstNameText;
     user.LastName = LastNameText;
 
+    // Get all skills in the list
     const li = document.querySelectorAll('ul li');
     for (let i = 0; i < li.length; i++) {
         user.SocialSkills.push(li[i].textContent)
     }
 
+    // Cycle through all added social media accounts and store them in users information
     SocialAccountJson = {}
     for (const Site in Socials) {
         if (Socials[Site] != "") {
@@ -64,36 +67,43 @@ SubmitBtn.addEventListener("click", function () {
         }
     }
 
+    // let payload = `{
+    //     "id": 0,
+    //     "firstName": "Vincent",
+    //     "lastName": "De Decker",
+    //     "socialSkills": [
+    //         "Social"
+    //     ],
+    //     "socialAccounts": [
+    //         {
+    //             "type": "Twitter",
+    //             "address": "@vincent"
+    //         }
+    //     ]
+    // }`;
+
+    // var data = new FormData();
+    // data.append("json", JSON.stringify(payload));
+
     console.log(user)
 
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://localhost:7247/api/Users/CreateUser");
-    xhr.setRequestHeader("Accept", "*/*");
-    xhr.setRequestHeader("Access-Control-Allow-Origin", "https://localhost:7247/api/Users/CreateUser");
-    xhr.setRequestHeader("Content-Type", "application/json");
+    const url = 'https://localhost:7247/api/Users/CreateUserJson'
 
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            console.log(xhr.status);
-            console.log(xhr.responseText);
-        }
-    };
+    const response = await fetch(url, {
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        mode: 'no-cors', // no-cors, *cors, same-origin
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: 'same-origin', // include, *same-origin, omit
+        headers: {
+            'Accept': '*/*',
+            'Content-Type': 'application/json'
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        redirect: 'follow', // manual, *follow, error
+        referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        body: data
+    });
+    console.log(response)
 
-    let data = `{
-        "id": 0,
-        "firstName": "Vincent",
-        "lastName": "De Decker",
-        "socialSkills": [
-            "Social"
-        ],
-        "socialAccounts": [
-            {
-                "type": "Twitter",
-                "address": "@vincent"
-            }
-        ]
-    }`;
-
-    xhr.send(data);
 })
 

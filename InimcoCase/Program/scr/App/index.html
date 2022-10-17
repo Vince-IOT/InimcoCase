@@ -24,20 +24,22 @@
 
             <div class="PersonalInfo-Container">
                 <span>First Name</span>
-                <input type="text" placeholder="First name" class="NameTextbox Hcenter" id="FirstNameTextbox">
+                <input type="text" placeholder="First name" class="NameTextbox Hcenter" id="FirstNameTextbox" value="Test">
                 <span>Last Name</span>
-                <input type="text" placeholder="Last name" class="NameTextbox Hcenter" id="LastNameTextbox">
+                <input type="text" placeholder="Last name" class="NameTextbox Hcenter" id="LastNameTextbox" value="Test">
             </div>
 
             <div class="PersonalSkills-Container">
 
                 <div class="SkillList-container">
                     <span class="SKL-Title">Skills</span>
-                    <ul class="SkillList" id="SkillList"></ul>
+                    <ul class="SkillList" id="SkillList">
+                        <li>Test</li>
+                    </ul>
                 </div>
 
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Personality</button>
+                    <button onclick="ToggleDropdown()" class="dropbtn">Personality</button>
                     <div id="SkillsDropdown" class="SkillsDropdown-content">
                       <input type="text" placeholder="Search.." id="SKillsInput" onkeyup="filterFunction()">
                       <span onclick="AddSkillToList(this)">Team Player</span>
@@ -52,6 +54,8 @@
                       <span onclick="AddSkillToList(this)">Enthusiastic</span>
                       <span onclick="AddSkillToList(this)">Resourcefull</span>
                       <span onclick="AddSkillToList(this)">Forgiving</span>
+                      <span onclick="AddSkillToList(this)">Introvert</span>
+                      <span onclick="AddSkillToList(this)">Extrovert</span>
                       <input type="text" placeholder="Add you own" id="AddSKill-Textbox"> <button id="AddSkillBtn" class="AddSkillBtn">ADD</button>
                     </div>
                 </div>
