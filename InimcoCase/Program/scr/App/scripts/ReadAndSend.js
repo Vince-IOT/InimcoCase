@@ -65,5 +65,35 @@ SubmitBtn.addEventListener("click", function () {
     }
 
     console.log(user)
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://localhost:7247/api/Users/CreateUser");
+    xhr.setRequestHeader("Accept", "*/*");
+    xhr.setRequestHeader("Access-Control-Allow-Origin", "https://localhost:7247/api/Users/CreateUser");
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            console.log(xhr.status);
+            console.log(xhr.responseText);
+        }
+    };
+
+    let data = `{
+        "id": 0,
+        "firstName": "Vincent",
+        "lastName": "De Decker",
+        "socialSkills": [
+            "Social"
+        ],
+        "socialAccounts": [
+            {
+                "type": "Twitter",
+                "address": "@vincent"
+            }
+        ]
+    }`;
+
+    xhr.send(data);
 })
 
